@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
 
 @Component({
   selector: 'app-music-player',
@@ -11,5 +11,14 @@ export class MusicPlayerComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input() paused;
+  // Controls
+  @Output() backward = new EventEmitter();
+  @Output() pauseplay = new EventEmitter();
+  @Output() forward = new EventEmitter();
+  @Output() random = new EventEmitter();
+  @Output() stop = new EventEmitter();
+
 
 }

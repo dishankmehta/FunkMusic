@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-music-progress',
@@ -11,5 +11,12 @@ export class MusicProgressComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  // Played
+  @Input() elapsed: string;
+  // Total time
+  @Input() total: string;
+  // Current time for the progress bar
+  @Input() current: number;
 
 }

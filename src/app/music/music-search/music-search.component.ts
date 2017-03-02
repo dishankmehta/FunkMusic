@@ -12,9 +12,9 @@ export class MusicSearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  track: string;
 
-  @Input tracks:any[];
+  track: string;
+  @Input() tracks: any[];
 
   @Output() update = new EventEmitter();
   @Output() query = new EventEmitter();
